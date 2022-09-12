@@ -1,11 +1,11 @@
 
 FROM mjgargani/puppeteer:trybe1.0
 
+WORKDIR /usr/app  
 
 ADD ./node_modules.tar.gz ./
 
 COPY . .
 
-WORKDIR /usr/app  
 
-CMD npm test
+ENTRYPOINT [ "npm", "test" ]
