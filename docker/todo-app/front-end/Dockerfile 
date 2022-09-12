@@ -1,6 +1,6 @@
+FROM node:14
 
-FROM mjgargani/puppeteer:trybe1.0
-
+EXPOSE 3000
 
 ADD node_modules.tar.gz ./
 
@@ -8,4 +8,5 @@ COPY . .
 
 WORKDIR /usr/app  
 
-CMD npm test
+CMD npm start
+
